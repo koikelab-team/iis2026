@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 1st Interactive Intelligence Symposium 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 210mm;
+            height: 297mm;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e40af;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            color: #1e40af;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #ef4444;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .subtitle a {
+            color: inherit;
+        }
+
+        .host-info {
+            font-size: 12px;
+            color: #333;
+            margin-top: 10px;
+        }
+        
+        .info-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #1e40af;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        
+        .info-box h3 {
+            font-size: 12px;
+            color: #1e40af;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .info-box p {
+            font-size: 11px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 3px;
+        }
+        
+        .schedule {
+            margin-bottom: 20px;
+        }
+        
+        .day-section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .day-header {
+            background-color: #1e40af;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .day-header a {
+            color: inherit;
+        }
+        
+        .schedule-item {
+            display: flex;
+            margin-bottom: 12px;
+            border-left: 3px solid #3b82f6;
+            padding-left: 15px;
+            gap: 20px;
+        }
+        
+        .time {
+            font-size: 12px;
+            font-weight: bold;
+            color: #1e40af;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+        
+        .activity {
+            font-size: 12px;
+            color: #333;
+            flex-grow: 1;
+        }
+        
+        .activity-title {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .activity-desc {
+            font-size: 11px;
+            color: #666;
+            margin-left: 0;
+        }
+        
+        .location {
+            font-size: 11px;
+            color: #ef4444;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        .location a {
+            color: inherit;
+        }
+        
+        .footer-info {
+            background-color: #f3f4f6;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .footer-info h4 {
+            font-size: 12px;
+            color: #1e40af;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .support-list {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .support-list li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .support-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #1e40af;
+            font-weight: bold;
+        }
+        
+        .sponsors {
+            text-align: center;
+            font-size: 10px;
+            color: #999;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            .day-header {
+                background-color: #1e40af !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>The 1st Interactive Intelligence Symposium 2026</h1>
+            <p>International Symposium on Interactive Intelligence</p>
+            <div class="subtitle">October 15–16, 2026 | <a href="https://www.google.com/maps/search/?api=1&amp;query=Pudong+Shangri-La%2C+Shanghai" target="_blank" rel="noopener">Pudong Shangri-La, Shanghai</a></div>
+            <div class="host-info"><strong>Hosted by:</strong> IIL (Institute of Science Tokyo) | <strong>Sponsored by:</strong> Alaya Lab</div>
+        </div>
+        
+        <!-- Schedule -->
+        <div class="schedule">
+            <div class="day-section">
+                <div class="day-header">📅 October 15 (Thursday) - Excursion Day</div>
+                <div class="schedule-item">
+                    <div class="time">10:00 - 11:00</div>
+                    <div class="activity"><div class="activity-title">Introduction &amp; Networking</div></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">11:00 - 12:00</div>
+                    <div class="activity"><div class="activity-title">Group Assembly &amp; Transportation</div></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">12:00 - 17:30</div>
+                    <div class="activity"><div class="activity-title">Excursion — Group A: <a href="https://www.google.com/maps/search/?api=1&amp;query=Shanghai+Yao+Xue+Ice+%26+Snow+World" target="_blank" rel="noopener">Shanghai Yao Xue Ice &amp; Snow World</a></div></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">12:00 - 17:30</div>
+                    <div class="activity"><div class="activity-title">Excursion — Group B: Shanghai City Sightseeing</div></div>
+                </div>
+                <div class="schedule-item">
+                    <div class="time">18:30 - 21:00</div>
+                    <div class="activity"><div class="activity-title">Welcome Dinner &amp; Networking</div></div>
+                </div>
+            </div>
+
+            <div class="day-section">
+                <div class="day-header">📅 October 16 (Friday) · <a href="https://www.google.com/maps/search/?api=1&amp;query=Pudong+Shangri-La%2C+Shanghai" target="_blank" rel="noopener">Pudong Shangri-La, Shanghai</a></div>
+                
+                <div class="schedule-item">
+                    <div class="time">09:00 - 09:10</div>
+                    <div class="activity">
+                        <div class="activity-title">Opening</div>
+                        <div class="activity-desc">Dr. Hideki Koike</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">09:10 - 09:30</div>
+                    <div class="activity">
+                        <div class="activity-title">Science Tokyo Interactive Intelligence Lab Introduction</div>
+                        <div class="activity-desc">Dr. Erwin Wu</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">09:30 - 10:30</div>
+                    <div class="activity">
+                        <div class="activity-title">Alaya Lab Research Introduction</div>
+                        <div class="activity-desc">Dr. Kaipeng Zhang</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">10:30 - 11:00</div>
+                    <div class="activity">
+                        <div class="activity-title">IIL Research Introduction</div>
+                        <div class="activity-desc">Dr. Hideki Koike</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">11:00 - 11:30</div>
+                    <div class="activity">
+                        <div class="activity-title">IIL Research Introduction</div>
+                        <div class="activity-desc">Dr. Yichen Peng</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">11:30 - 13:30</div>
+                    <div class="activity">
+                        <div class="activity-title">Lunch Break</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">13:30 - 14:00</div>
+                    <div class="activity">
+                        <div class="activity-title">Keynote 1</div>
+                        <div class="activity-desc">Dr. Sato Imari</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="time">14:10 - 14:40</div>
+                    <div class="activity">
+                        <div class="activity-title">Keynote 2</div>
+                        <div class="activity-desc">Dr. Saito Hideo</div>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">15:00 - 15:30</div>
+                    <div class="activity">
+                        <div class="activity-title">Keynote 3</div>
+                        <div class="activity-desc">Dr. Nakamura Satoshi</div>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">15:30 - 16:00</div>
+                    <div class="activity">
+                        <div class="activity-title">Keynote 4</div>
+                        <div class="activity-desc">Dr. Morishima Shigeo</div>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">16:30 - 17:00</div>
+                    <div class="activity">
+                        <div class="activity-title">Closing</div>
+                        <div class="activity-desc">Dr. Zheng Bo</div>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">18:30</div>
+                    <div class="activity">
+                        <div class="activity-title">Move to Dinner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sponsors">
+            <!-- <p><strong>Hosted by:</strong> IIL (Institute of Science Tokyo) | <strong>Sponsored by:</strong> Alaya Lab</p> -->
+            <p><a href="https://interactive-intelligence-lab.github.io/lab-homepage/">Visit our website</a></p>
+        </div>
+    </div>
+</body>
+</html>
